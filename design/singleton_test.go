@@ -2,12 +2,14 @@ package design
 
 import "testing"
 
-func sintleton(t *testing.T) {
+func singleton(t *testing.T) {
 
-	var s1 = GetChiguiroInstance()
-	var s2 = GetChiguiroInstance()
+	var chiguiro1 = NewChiguiroInstance()
+	chiguiro1.SetWeight(80)
 
-	if s1 != s2 {
+	var chiguiro2 = NewChiguiroInstance()
+
+	if chiguiro1.GetWeight() != chiguiro2.GetWeight() {
 		t.Error("s1 and s2 are not the same instance")
 	}
 }
