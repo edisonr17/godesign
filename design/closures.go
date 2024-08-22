@@ -13,7 +13,7 @@ func counterByContext() func() int32 {
 
 func Closures() {
 	counter := counterByContext()
-	fmt.Println("contador 1", counter) // Output: (1, "")
+	fmt.Println("contador 1", counter()) // Output: (1, "")
 
 	newCounter := counterByContext()
 	fmt.Println("contador 1", counter()) // Output: (1, "")

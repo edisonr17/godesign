@@ -7,7 +7,6 @@ type BikeAction interface {
 	Stop()
 	Status()
 	SetStatus(bool)
-	Wheele()
 }
 
 type Bike struct {
